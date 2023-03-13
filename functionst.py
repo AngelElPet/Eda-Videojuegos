@@ -21,13 +21,13 @@ def pagina_principal ():
 
     img = Image.open('src/data/plataforma1.jpg')
     st.image(img,use_column_width='auto')
-    st.markdown('''¿Dónde crees que se estrenan antes más videojuegos, en la región de Europa o en la región de Norte América?\n
-    Yo personalmente considero que salen más juegos antes en Norte América\n
-    que en Europa, y para contrastarlo hemos recopilado datos de tres plataformas diferentes
+    st.markdown('''¿Dónde crees que se estrenan antes más videojuegos, en la región de Europa o en la región de Norte América?
+    Yo personalmente considero que salen más juegos antes en Norte América
+    que en Europa, y para contrastarlo hemos recopilado datos de tres plataformas diferentes\n
     \t 1.-Playstation\n
-    \t Xbox \n
-    \t Switch
-    \n\n
+    \t 2.-Xbox \n
+    \t 3.-Switch
+    \n
     En el siguiente desplegable, encontraréis los enlaces \n de donde estaban los datos originales.''')
 
     with st.expander('Dirección de los datos'):
