@@ -18,6 +18,10 @@ def pagina_principal ():
     st.title('Bienvenido')
 
     st.subheader('Introducción')
+    st.markdown('''Hola a todas y todos, soy Ángel, pero me conocen como AngelElPEt y estamos aquí para que veais
+     un pequeño trabajo de busqueda de información y procesamiento de datos acerca de los videojuegos. Para que 
+      podáis entender mejor lo que se hace a lo largo de esta página, os dejo el enlace a mi github para que 
+       podáis descargar el código: https://github.com/AngelElPet/Eda-Videojuegos.git''')
 
     img = Image.open('src/data/plataforma1.jpg')
     st.image(img,use_column_width='auto')
@@ -51,7 +55,9 @@ def pagina_principal ():
             st.markdown('''
                 \t*Esta es la url de Swithc 'https://api.sampleapis.com/switch/games'\n
         ''')
-
+    st.markdown('''Para poder hacer operativos estos datos, se han tenido que eliminar y modificar 
+    con el objetivo de convertir una nueva tabla de valores a raiz de las que se podían obtener de los enlaces anteriores.
+    Para ello ejecutaréis en el archivo main.py para pasar de tener 3 DataFrames a tener uno solo y que se llame Videojuegos.csv''')
 
 
 
