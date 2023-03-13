@@ -19,7 +19,7 @@ def pagina_principal ():
 
     st.subheader('Introducción')
 
-    img = Image.open('src\data\plataforma1.jpg')
+    img = Image.open('src/data/plataforma1.jpg')
     st.image(img,use_column_width='auto')
     st.markdown('''Aquí irá una pequeña introducción de lo que se verá en la página ''')
 
