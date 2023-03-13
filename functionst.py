@@ -73,8 +73,7 @@ def cargar_datos():
             fig = f.figure
             st.markdown("<h3 style='text-align: center; color: skyblue;'> Gráfica de Barras de Videojuegos </h3>", unsafe_allow_html=True)
             st.pyplot(fig)
-    else: 
-        st.markdown('Ve a la pestaña de Cargar datos y haz click para poder subir el archivo Videojuegos.csv')
+ 
 
 def tarta():
     x=pd.DataFrame(df.Comp.value_counts())

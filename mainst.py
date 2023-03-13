@@ -13,9 +13,11 @@ menu = st.sidebar.selectbox('Menu',('Página principal','Cargar_datos','Regiones
 
 if menu=='Página principal':
     pagina_principal()
+
 elif menu =='Cargar_datos':
     cargar_datos()
 elif menu =='Conclusión':
+    
     st.header('Videojuegos')
     plataforma_year()
     tarta()
