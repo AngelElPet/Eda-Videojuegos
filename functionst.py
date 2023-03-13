@@ -19,14 +19,14 @@ def pagina_principal ():
 
     st.subheader('Introducción')
 
-    img = Image.open('.\src\data\plataforma1.jpg')
+    img = Image.open('src\data\plataforma1.jpg')
     st.image(img,use_column_width='auto')
     st.markdown('''Aquí irá una pequeña introducción de lo que se verá en la página ''')
 
     with st.expander('Dirección de los datos'):
         st.markdown('En los siguientes enlaces están los datos originales de donde se ha extraido el trabajo')
         if st.checkbox("Playstation",value=True):
-            i1= Image.open('.\src\data\playstation.jpg')
+            i1= Image.open('src\data\playstation.jpg')
             st.image(i1,use_column_width='Auto')
             st.markdown('''
 
@@ -34,14 +34,14 @@ def pagina_principal ():
 
         ''')
         if st.checkbox("Xbox",value=True):
-            i2 = Image.open(".\src\data\\xbox.jpg")
+            i2 = Image.open("src\data\\xbox.jpg")
             st.image(i2,use_column_width='Auto')
             st.markdown('''
                 \t*Esta es la url de Xbox'https://api.sampleapis.com/xbox/games'\n
 
         ''')
         if st.checkbox("Switch",value=True):
-            i3= Image.open('.\src\data\switch.jpg')
+            i3= Image.open('src\data\switch.jpg')
             st.image(i3,use_column_width='Auto')
             st.markdown('''
                 \t*Esta es la url de Swithc 'https://api.sampleapis.com/switch/games'\n
@@ -191,7 +191,59 @@ def plataforma_year():
     fig = go.Figure(data=data,layout=layout)
     st.plotly_chart(fig,use_container_width=True)
     
-  
+def dias_Eu ():
+    df_dias1 = pd.DataFrame(df['Dia Eu'].value_counts())
+    df_dias1['dias']=df_dias1.index.astype(str)
+
+    fig1 = px.bar(df_dias1, x='Dia Eu',y='dias',color ='dias',
+                  labels={'dias':''}, color_discrete_sequence=px.colors.qualitative.Antique,
+                  height=800,
+                  width = 600)
+    
+    fig1.update_layout(font=dict(size=9),title_text='Cantidad de juegos que han salido en Europa, clasificados por los días del mes')
+    return fig1
+
+def dias_Na ():
+    
+    df_dias2 = pd.DataFrame(df['Dia Na'].value_counts())
+    df_dias2['dias']=df_dias2.index.astype(str)
+    
+
+    fig1 = px.bar(df_dias2, x='Dia Na',y='dias',color ='dias',
+                  labels={'dias':''}, color_discrete_sequence=px.colors.qualitative.Antique,
+                  height=800,
+                  width = 600)
+    
+    fig1.update_layout(font=dict(size=9),title_text='Cantidad de juegos que han salido en Norte América, clasificados por los días del mes')
+    return fig1
+
+def dias_Jp ():
+    df_dias3 = pd.DataFrame(df['Dia Jp'].value_counts())
+    df_dias3['dias']=df_dias3.index.astype(str)
+
+
+    fig1 = px.bar(df_dias3, x='Dia Jp',y='dias',color ='dias',
+                  labels={'dias':''}, color_discrete_sequence=px.colors.qualitative.Antique,
+                  height=800,
+                  width = 600)
+    
+    fig1.update_layout(font=dict(size=9),title_text='Cantidad de juegos que han salido en Japón, clasificados por los días del mes')
+    return fig1
+
+def dias_Au ():
+
+    df_dias4 = pd.DataFrame(df['Dia Au'].value_counts())
+    df_dias4['dias']=df_dias4.index.astype(str)
+
+    fig1 = px.bar(df_dias4, x='Dia Au',y='dias',color ='dias',
+                  labels={'dias':''}, color_discrete_sequence=px.colors.qualitative.Antique,
+                  height=800,
+                  width = 600)
+    
+    fig1.update_layout(font=dict(size=9),title_text='Cantidad de juegos que han salido en Australia, clasificados por los días del mes')
+    return fig1
+
+
 
 
 
