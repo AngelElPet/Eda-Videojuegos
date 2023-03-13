@@ -27,7 +27,7 @@ def pagina_principal ():
         st.markdown('En los siguientes enlaces están los datos originales de donde se ha extraido el trabajo')
         if st.checkbox("Playstation",value=True):
             i1= Image.open('src/data/playstation.jpg')
-            st.image(i1,use_column_width='Auto')
+            st.image(i1)
             st.markdown('''
 
                 \t*Esta es la url de PlayStation 'https://api.sampleapis.com/playstation/games'\n
