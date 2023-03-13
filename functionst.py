@@ -26,7 +26,7 @@ def pagina_principal ():
     with st.expander('Dirección de los datos'):
         st.markdown('En los siguientes enlaces están los datos originales de donde se ha extraido el trabajo')
         if st.checkbox("Playstation",value=True):
-            i1= Image.open('src/data/playstation.jpg')
+            i1= Image.open('src/data/playstation1.jpg')
             st.image(i1)
             st.markdown('''
 
