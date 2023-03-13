@@ -81,7 +81,7 @@ pd_switch['plataforma']='switch'
 df = pd.concat([pd_playstation,pd_switch,pd_xbox],ignore_index=True)
 df['id']=1
 df.info()
-df.to_csv('.\src\data\Videojuegos.csv',sep = ';')
+df.to_csv('src\data\Videojuegos.csv',sep = ';')
 
 plataforma_year(df)
 

@@ -1,5 +1,4 @@
 from plotly.offline import  iplot
-from plotly.io import write_image
 import plotly.graph_objs as go
 import matplotlib.pyplot as plt
 import seaborn as sb
@@ -137,30 +136,33 @@ def juegos_mes(df):
     
     conteo = df['Mes Eu'].value_counts(ascending=True)
     plt.figure(figsize=(10,5))
-    plt.hlines(y=conteo.index,xmin=0,xmax=conteo,color ='skyblue')
+
+    fig = plt.hlines(y=conteo.index,xmin=0,xmax=conteo,color ='skyblue')
+
     plt.plot(conteo,conteo.index,'o')
     plt.title('Cantidad de juegos que han salido cada mes en Europa')
-    
+    fig.write_image('src\data\Mes Eu',format='jpg')
     
 
     conteo = df['Mes Na'].value_counts(ascending=True)
     plt.figure(figsize=(10,5))
-    plt.hlines(y=conteo.index,xmin=0,xmax=conteo,color ='skyblue')
+    fig=plt.hlines(y=conteo.index,xmin=0,xmax=conteo,color ='skyblue')
     plt.plot(conteo,conteo.index,'o')
     plt.title('Cantidad de juegos que han salido cada mes en Norte América')
-    
+    fig.write_image('src\data\Mes Na',format='jpg')
     
     conteo = df['Mes Jp'].value_counts(ascending=True)
     plt.figure(figsize=(10,5))
-    plt.hlines(y=conteo.index,xmin=0,xmax=conteo,color ='skyblue')
+    fig=plt.hlines(y=conteo.index,xmin=0,xmax=conteo,color ='skyblue')
     plt.plot(conteo,conteo.index,'o')
     plt.title('Cantidad de juegos que han salido cada mes en Japón')
+    fig.write_image('src\data\Mes Jp',format='jpg')
 
     conteo = df['Mes Au'].value_counts(ascending=True)
     plt.figure(figsize=(10,5))
-    plt.hlines(y=conteo.index,xmin=0,xmax=conteo,color ='skyblue')
+    fig=plt.hlines(y=conteo.index,xmin=0,xmax=conteo,color ='skyblue')
     plt.plot(conteo,conteo.index,'o')
     plt.title('Cantidad de juegos que han salido cada mes en Australia')
-
+    fig.write_image('src\data\Mes Au',format='jpg')
     
     
