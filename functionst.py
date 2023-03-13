@@ -26,7 +26,7 @@ def pagina_principal ():
     with st.expander('Dirección de los datos'):
         st.markdown('En los siguientes enlaces están los datos originales de donde se ha extraido el trabajo')
         if st.checkbox("Playstation",value=True):
-            i1= Image.open('src\data\playstation.jpg')
+            i1= Image.open('src/data/playstation.jpg')
             st.image(i1,use_column_width='Auto')
             st.markdown('''
 
@@ -34,14 +34,14 @@ def pagina_principal ():
 
         ''')
         if st.checkbox("Xbox",value=True):
-            i2 = Image.open("src\data\\xbox.jpg")
+            i2 = Image.open("src/data/xbox.jpg")
             st.image(i2,use_column_width='Auto')
             st.markdown('''
                 \t*Esta es la url de Xbox'https://api.sampleapis.com/xbox/games'\n
 
         ''')
         if st.checkbox("Switch",value=True):
-            i3= Image.open('src\data\switch.jpg')
+            i3= Image.open('src/data/switch.jpg')
             st.image(i3,use_column_width='Auto')
             st.markdown('''
                 \t*Esta es la url de Swithc 'https://api.sampleapis.com/switch/games'\n
@@ -51,14 +51,14 @@ def pagina_principal ():
 
 
 def cargar_datos():
-    st.markdown('hola1')
+
     archivo=st.file_uploader('Arrastra aquí el archivo CSV Videojuegos de la carpeta data',type = ['csv'])
 
     if archivo is not None:
 
         global df
         df=pd.read_csv(archivo,sep=';')
-        st.markdown('holdsga')
+
         if st.button('Ver tabla de Videojuegos'):
             st.markdown("<h3 style='text-align: center; color: skyblue;'> DataFrame Videojuegos </h3>", unsafe_allow_html=True)
             st.dataframe(df)

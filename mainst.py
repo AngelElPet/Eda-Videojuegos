@@ -61,13 +61,13 @@ elif menu =='Conclusión':
                 Finalmente podemos apreciar que se han estrenado antes más juegos en Euro que en Norte América. Sin embargo, cabe destacar
                 que la gran mayoría de los juegos se han estrenado a la vez en ambas regiones''')
 elif menu == 'Regiones por Meses':
-    img1 = Image.open('src\data\Mes Eu.jpg')
+    img1 = Image.open('src/data/Mes Eu.jpg')
     st.image(img1,use_column_width='auto') 
-    img2 = Image.open('src\data\Mes Au.jpg')
+    img2 = Image.open('src/data/Mes Au.jpg')
     st.image(img2,use_column_width='auto') 
-    img3 = Image.open('src\data\Mes Jp.jpg')
+    img3 = Image.open('src/data/Mes Jp.jpg')
     st.image(img3,use_column_width='auto')
-    img4 = Image.open('src\data\Mes Na.jpg')
+    img4 = Image.open('src/data/Mes Na.jpg')
     st.image(img4,use_column_width='auto')
 elif menu == 'Generos principales':
     
