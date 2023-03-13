@@ -28,7 +28,8 @@ def pagina_principal ():
     \t 2.-Xbox \n
     \t 3.-Switch
     \n
-    En el siguiente desplegable, encontraréis los enlaces \n de donde estaban los datos originales.''')
+    ''')
+    st.markdown('''En el siguiente desplegable, encontraréis los enlaces \n de donde estaban los datos originales.''')
 
     with st.expander('Dirección de los datos'):
         st.markdown('En los siguientes enlaces están los datos originales de donde se ha extraido el trabajo')
