@@ -14,7 +14,7 @@ Por último, para obtener los datos finales se ha empleado SQL.
 
 Todo el proyecto se puede ver en el siguiente enlace de streamlit, https://angelelpet-eda-videojuegos-mainst-zg10vy.streamlit.app/.
 
-![imagen](src\data\generos.jpg)
+![imagen](src/data/generos.jpg)
 
 ## Conclusión
 
