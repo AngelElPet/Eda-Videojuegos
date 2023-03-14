@@ -12,9 +12,9 @@ El proyecto empezó motivado por 3 json de videojuegos transformados en DataFram
 Más adelante, para poder presentar los datos en gráficas, se han empleado herramientas como Streamlit, Matplotlib, Plotly y Seaborn.
 Por último, para obtener los datos finales se ha empleado SQL.
 
-Todo el proyecto se puede ver en el siguiente enlace de streamlit, Linkedin 
+Todo el proyecto se puede ver en el siguiente enlace de streamlit, https://angelelpet-eda-videojuegos-mainst-zg10vy.streamlit.app/.
 
-
+Image.open('src/data/generos.jpg')
 
 
 
