@@ -21,19 +21,19 @@ def pagina_principal ():
     st.markdown('''Hola a todas y todos, soy Ángel, pero me conocen como AngelElPEt y estamos aquí para que veais
      un pequeño trabajo de busqueda de información y procesamiento de datos acerca de los videojuegos. Para que 
       podáis entender mejor lo que se hace a lo largo de esta página, os dejo el enlace a mi github para que 
-       podáis descargar el código: https://github.com/AngelElPet/Eda-Videojuegos.git''')
+       podáis descargar el código: https://github.com/AngelElPet/Eda-Videojuegos.git.''')
 
     img = Image.open('src/data/plataforma1.jpg')
     st.image(img,use_column_width='auto')
     st.markdown('''¿Dónde crees que se estrenan antes más videojuegos, en la región de Europa o en la región de Norte América?
     Yo personalmente considero que salen más juegos antes en Norte América
     que en Europa, y para contrastarlo hemos recopilado datos de tres plataformas diferentes: Playstation, Xbox y Switch.
-    Prácticamente todo el mundo ha jugado alguna vez a estas 'maquinitas'
+    Prácticamente todo el mundo ha jugado alguna vez a estas 'maquinitas'.
     ''')
     st.markdown('''En el siguiente desplegable, encontraréis los enlaces \n de donde estaban los datos originales.''')
 
     with st.expander('Dirección de los datos'):
-        st.markdown('En los siguientes enlaces están los datos originales de donde se ha extraido el trabajo')
+        st.markdown('En los siguientes enlaces están los datos originales de donde se ha extraido el trabajo.')
         if st.checkbox("Playstation",value=True):
             i1= Image.open('src/data/playstation1.jpg')
             st.image(i1)
@@ -57,7 +57,7 @@ def pagina_principal ():
         ''')
     st.markdown('''Para poder hacer operativos estos datos, se han tenido que eliminar y modificar 
     con el objetivo de convertir una nueva tabla de valores a raiz de las que se podían obtener de los enlaces anteriores.
-    Para ello ejecutaréis en el archivo main.py para pasar de tener 3 DataFrames a tener uno solo y que se llame Videojuegos.csv''')
+    Para ello ejecutaréis en el archivo main.py para pasar de tener 3 DataFrames a tener uno solo y que se llame Videojuegos.csv.''')
 
 
 
@@ -79,6 +79,7 @@ def cargar_datos():
             fig = f.figure
             st.markdown("<h3 style='text-align: center; color: skyblue;'> Gráfica de Barras de Videojuegos </h3>", unsafe_allow_html=True)
             st.pyplot(fig)
+    
  
 
 def tarta():
@@ -128,14 +129,15 @@ def plataforma_year():
     s1.dropna(inplace=True)
     s2.dropna(inplace=True)
     s3.dropna(inplace=True)
-    
+
     trace1 = go.Bar(x=s1.Year,y=s1.id,name='playstation', marker= dict(color='rgba(255,174,255,0.5)',line = dict(color='rgb(0,0,0)', width = 1.5)))
     trace2 = go.Bar(x=s2.Year,y=s2.id,name='xbox', marker= dict(color='rgba(255, 255, 128, 0.5)',line = dict(color='rgb(0,0,0)', width = 1.5)))
     trace3 = go.Bar(x=s3.Year,y=s3.id,name='switch', marker= dict(color='skyblue',line = dict(color='rgb(0,0,0)', width = 1.5)))
     data = [trace1,trace2,trace3]
     layout = go.Layout(title ='Cantidad de juegos que han salido en Europa, filtrado por plataformas',barmode='group')
     fig = go.Figure(data=data,layout=layout)
-    st.plotly_chart(fig,use_container_width=True)
+    if st.checkbox("Europa",value=False):
+        st.plotly_chart(fig,use_container_width=True)
 
     
     s2 = pd.DataFrame(df_xb.groupby('Year Jp').sum('id'))
@@ -157,7 +159,8 @@ def plataforma_year():
     data = [trace1,trace2,trace3]
     layout = go.Layout(title ='Cantidad de juegos que han salido en Japón, filtrado por plataformas',barmode='group')
     fig = go.Figure(data=data,layout=layout)
-    st.plotly_chart(fig,use_container_width=True)
+    if st.checkbox("Japón",value=False):
+        st.plotly_chart(fig,use_container_width=True)
 
     s2 = pd.DataFrame(df_xb.groupby('Year Au').sum('id'))
     s3 = pd.DataFrame(df_sw.groupby('Year Au').sum('id'))
@@ -179,7 +182,8 @@ def plataforma_year():
     data = [trace1,trace2,trace3]
     layout = go.Layout(title ='Cantidad de juegos que han salido en Australia, filtrado por plataformas',barmode='group')
     fig = go.Figure(data=data,layout=layout)
-    st.plotly_chart(fig,use_container_width=True)
+    if st.checkbox("Australia",value=False):
+        st.plotly_chart(fig,use_container_width=True)
     
     s2 = pd.DataFrame(df_xb.groupby('Year Na').sum('id'))
     s3 = pd.DataFrame(df_sw.groupby('Year Na').sum('id'))
@@ -200,7 +204,8 @@ def plataforma_year():
     data = [trace1,trace2,trace3]
     layout = go.Layout(title ='Cantidad de juegos que han salido en Norte América, filtrado por plataformas',barmode='group')
     fig = go.Figure(data=data,layout=layout)
-    st.plotly_chart(fig,use_container_width=True)
+    if st.checkbox("Norte América",value=False):
+        st.plotly_chart(fig,use_container_width=True)
     
 def dias_Eu ():
     df_dias1 = pd.DataFrame(df['Dia Eu'].value_counts())
