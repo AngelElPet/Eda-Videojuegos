@@ -1,9 +1,9 @@
 import sqlite3
 
 
-from function import*
-from function2 import *
-from function3 import *
+from utils_main.function import*
+from utils_main.function2 import *
+from utils_main.function3 import *
 
 import warnings
 warnings.filterwarnings("ignore")
@@ -81,7 +81,7 @@ pd_switch['plataforma']='switch'
 df = pd.concat([pd_playstation,pd_switch,pd_xbox],ignore_index=True)
 df['id']=1
 df.info()
-df.to_csv('src\data\Videojuegos.csv',sep = ';')
+df.to_csv('data\Videojuegos.csv',sep = ';')
 
 plataforma_year(df)
 

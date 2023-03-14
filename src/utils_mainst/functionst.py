@@ -8,7 +8,7 @@ import plotly.express as px
 import pydeck as pdk
 import seaborn as sb
 
-from function3 import*
+from utils_main.function3 import*
 
 def config_pagina():
     st.set_page_config(page_title='VIDEOJUEGOS',page_icon=':chart:',layout='centered')
@@ -23,7 +23,7 @@ def pagina_principal ():
       podáis entender mejor lo que se hace a lo largo de esta página, os dejo el enlace a mi github para que 
        podáis descargar el código: https://github.com/AngelElPet/Eda-Videojuegos.git.''')
 
-    img = Image.open('src/data/plataforma1.jpg')
+    img = Image.open('data/plataforma1.jpg')
     st.image(img,use_column_width='auto')
     st.markdown('''¿Dónde crees que se estrenan antes más videojuegos, en la región de Europa o en la región de Norte América?
     Yo personalmente considero que salen más juegos antes en Norte América
@@ -35,7 +35,7 @@ def pagina_principal ():
     with st.expander('Dirección de los datos'):
         st.markdown('En los siguientes enlaces están los datos originales de donde se ha extraido el trabajo.')
         if st.checkbox("Playstation",value=True):
-            i1= Image.open('src/data/playstation1.jpg')
+            i1= Image.open('data/playstation1.jpg')
             st.image(i1)
             st.markdown('''
 
@@ -43,14 +43,14 @@ def pagina_principal ():
 
         ''')
         if st.checkbox("Xbox",value=True):
-            i2 = Image.open("src/data/xbox.jpg")
+            i2 = Image.open("data/xbox.jpg")
             st.image(i2,use_column_width='Auto')
             st.markdown('''
                 \t*Esta es la url de Xbox 'https://api.sampleapis.com/xbox/games'\n
 
         ''')
         if st.checkbox("Switch",value=True):
-            i3= Image.open('src/data/switch.jpg')
+            i3= Image.open('data/switch.jpg')
             st.image(i3,use_column_width='Auto')
             st.markdown('''
                 \t*Esta es la url de Swithc 'https://api.sampleapis.com/switch/games'\n

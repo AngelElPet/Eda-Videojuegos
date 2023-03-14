@@ -140,7 +140,7 @@ def juegos_mes(df):
     plt.hlines(y=conteo.index,xmin=0,xmax=conteo,color ='skyblue')
     plt.plot(conteo,conteo.index,'o')
     plt.title('Cantidad de juegos que han salido cada mes en Europa')
-    plt.savefig('src\data\Mes Eu.jpg')
+    plt.savefig('data\Mes Eu.jpg')
     
 
     conteo = df['Mes Na'].value_counts(ascending=True)
@@ -148,20 +148,20 @@ def juegos_mes(df):
     plt.hlines(y=conteo.index,xmin=0,xmax=conteo,color ='skyblue')
     plt.plot(conteo,conteo.index,'o')
     plt.title('Cantidad de juegos que han salido cada mes en Norte América')
-    plt.savefig('src\data\Mes Na.jpg')
+    plt.savefig('data\Mes Na.jpg')
     
     conteo = df['Mes Jp'].value_counts(ascending=True)
     plt.figure(figsize=(10,5))
     plt.hlines(y=conteo.index,xmin=0,xmax=conteo,color ='skyblue')
     plt.plot(conteo,conteo.index,'o')
     plt.title('Cantidad de juegos que han salido cada mes en Japón')
-    plt.savefig('src\data\Mes Jp.jpg')
+    plt.savefig('data\Mes Jp.jpg')
 
     conteo = df['Mes Au'].value_counts(ascending=True)
     plt.figure(figsize=(10,5))
     plt.hlines(y=conteo.index,xmin=0,xmax=conteo,color ='skyblue')
     plt.plot(conteo,conteo.index,'o')
     plt.title('Cantidad de juegos que han salido cada mes en Australia')
-    plt.savefig('src\data\Mes Au.jpg')
+    plt.savefig('data\Mes Au.jpg')
     
     
