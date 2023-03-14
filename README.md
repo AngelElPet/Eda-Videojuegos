@@ -16,6 +16,9 @@ Todo el proyecto se puede ver en el siguiente enlace de streamlit, https://angel
 
 ![imagen](src\data\generos.jpg)
 
+## Conclusión
+
+
 
 
 https://angelelpet-eda-videojuegos-mainst-zg10vy.streamlit.app/
