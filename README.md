@@ -22,7 +22,7 @@ En la gráfica anterior podemos ver cuantos videojuegos se han creado sobre los 
 
 Finalmente podemos observar en esta gráfica en que regiones se han estrenado a la vez los videojuegos de todas las plataformas
 
-![imagen](src/data/PieConclusion.jpg)
+![imagen](src/data/PieConclusion.png)
 ![imagen](src/data/Comp_total.png)
 
 
