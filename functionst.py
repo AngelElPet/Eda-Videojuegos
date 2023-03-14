@@ -46,7 +46,7 @@ def pagina_principal ():
             i2 = Image.open("src/data/xbox.jpg")
             st.image(i2,use_column_width='Auto')
             st.markdown('''
-                \t*Esta es la url de Xbox'https://api.sampleapis.com/xbox/games'\n
+                \t*Esta es la url de Xbox 'https://api.sampleapis.com/xbox/games'\n
 
         ''')
         if st.checkbox("Switch",value=True):
