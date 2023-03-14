@@ -16,9 +16,14 @@ Todo el proyecto se puede ver en el siguiente enlace de streamlit, https://angel
 
 ![imagen](src/data/generos.jpg)
 
+En la gráfica anterior podemos ver cuantos videojuegos se han creado sobre los principales géneros de esta industria.
+
 ## Conclusión
 
+Finalmente podemos observar en esta gráfica en que regiones se han estrenado a la vez los videojuegos de todas las plataformas
 
+![imagen](src/data/PieConclusion.jpg)
+![imagen](src/data/Comp_total.png)
 
 
 https://angelelpet-eda-videojuegos-mainst-zg10vy.streamlit.app/
