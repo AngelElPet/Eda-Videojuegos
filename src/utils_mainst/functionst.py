@@ -23,7 +23,7 @@ def pagina_principal ():
       podáis entender mejor lo que se hace a lo largo de esta página, os dejo el enlace a mi github para que 
        podáis descargar el código: https://github.com/AngelElPet/Eda-Videojuegos.git.''')
 
-    img = Image.open('data/plataforma1.jpg')
+    img = Image.open('src/data/plataforma1.jpg')
     st.image(img,use_column_width='auto')
     st.markdown('''¿Dónde crees que se estrenan antes más videojuegos, en la región de Europa o en la región de Norte América?
     Yo personalmente considero que salen más juegos antes en Norte América
