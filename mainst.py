@@ -15,7 +15,7 @@ if menu=='Página principal':
     pagina_principal()
 
 elif menu =='Cargar_datos':
-    cargar_datos
+    cargar_datos()
      
 elif menu =='Conclusión':
 
