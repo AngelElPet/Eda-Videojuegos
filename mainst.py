@@ -86,7 +86,9 @@ elif menu == 'Regiones por Meses':
         st.image(img4,use_column_width='auto')
 
 elif menu == 'Generos principales':
-    
+    st.subheader('Clasificación de videojuegos por los géneros principales')
+    st.markdown('''En este apartado podemos ver cuales han sido los generos más populares durante los últimos años. Esta información
+    puede inspirar a un empresa a tomar una decisión sobre que tipo de juegos desarrollar en un futuro.''')
     generos()
 
 elif menu== 'Regiones por Dias':
