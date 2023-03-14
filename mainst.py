@@ -57,7 +57,7 @@ elif menu =='Conclusión':
     query='''
     SELECT*
     FROM x
-    WHERE Regiones LIKE '%NA%' OR Regiones LIKE '%EU%' '''
+    WHERE Regiones LIKE '%NA%' AND Regiones LIKE '%EU%' '''
     st.dataframe(sql_query(query))
     st.markdown('''CONCLUSIÓN: \n
                 Finalmente podemos apreciar que se han estrenado antes más juegos en Euro que en Norte América. Sin embargo, cabe destacar
