@@ -1,6 +1,6 @@
 # Eda Videojuegos
 ## Introducción
-Este es un repositorio en el que he estado trabajando. El proyecto se ha realizado mayoritariamente en Python, pero también tiene Streamlit y SQL. En el archivo requirements están todas las librerias que se utilizan a lo largo de todo el código
+Este es un repositorio en el que he estado trabajando. El proyecto se ha realizado mayoritariamente en Python, pero también tiene Streamlit y SQL. En el archivo requirements.txt están todas las librerias que se utilizan a lo largo de todo el código
 
 ## Objetivo
 
