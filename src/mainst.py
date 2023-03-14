@@ -70,19 +70,19 @@ elif menu == 'Regiones por Meses':
     conclusiones como cuál es el mes más popular para estrenar un viedojuego y cual es el menos popular.''')
 
     if st.checkbox("Europa",value=False):
-        img1 = Image.open('data/Mes Eu.jpg')
+        img1 = Image.open('src/data/Mes Eu.jpg')
         st.image(img1,use_column_width='auto') 
     
     if st.checkbox("Australia",value=False):
-        img2 = Image.open('data/Mes Au.jpg')
+        img2 = Image.open('src/data/Mes Au.jpg')
         st.image(img2,use_column_width='auto') 
 
     if st.checkbox("Japón",value=False):
-        img3 = Image.open('data/Mes Jp.jpg')
+        img3 = Image.open('src/data/Mes Jp.jpg')
         st.image(img3,use_column_width='auto')
 
     if st.checkbox("Norte América",value=False):
-        img4 = Image.open('data/Mes Na.jpg')
+        img4 = Image.open('src/data/Mes Na.jpg')
         st.image(img4,use_column_width='auto')
 
 elif menu == 'Generos principales':

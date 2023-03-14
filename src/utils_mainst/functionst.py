@@ -35,7 +35,7 @@ def pagina_principal ():
     with st.expander('Dirección de los datos'):
         st.markdown('En los siguientes enlaces están los datos originales de donde se ha extraido el trabajo.')
         if st.checkbox("Playstation",value=True):
-            i1= Image.open('data/playstation1.jpg')
+            i1= Image.open('src/data/playstation1.jpg')
             st.image(i1)
             st.markdown('''
 
@@ -43,14 +43,14 @@ def pagina_principal ():
 
         ''')
         if st.checkbox("Xbox",value=True):
-            i2 = Image.open("data/xbox.jpg")
+            i2 = Image.open("src/data/xbox.jpg")
             st.image(i2,use_column_width='Auto')
             st.markdown('''
                 \t*Esta es la url de Xbox 'https://api.sampleapis.com/xbox/games'\n
 
         ''')
         if st.checkbox("Switch",value=True):
-            i3= Image.open('data/switch.jpg')
+            i3= Image.open('src/data/switch.jpg')
             st.image(i3,use_column_width='Auto')
             st.markdown('''
                 \t*Esta es la url de Swithc 'https://api.sampleapis.com/switch/games'\n
