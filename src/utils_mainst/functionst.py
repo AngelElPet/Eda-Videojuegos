@@ -104,7 +104,7 @@ def generos(df):
     f2= fig2.figure
     st.pyplot(f2)
 
-def plataforma_year():
+def plataforma_year(df):
     df_pd = df[df['plataforma']=='playstation']
     df_xb = df[df['plataforma']=='xbox']
     df_sw = df[df['plataforma']=='switch']
