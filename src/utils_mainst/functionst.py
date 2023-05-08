@@ -61,28 +61,21 @@ def pagina_principal ():
 
 
 
-def cargar_datos():
-
-    archivo=st.file_uploader('Arrastra aquí el archivo CSV Videojuegos de la carpeta data',type = ['csv'])
-
-    if archivo is not None:
-
-        global df
-        df=pd.read_csv(archivo,sep=';')
-
-        if st.button('Ver tabla de Videojuegos'):
-            st.markdown("<h3 style='text-align: center; color: skyblue;'> DataFrame Videojuegos </h3>", unsafe_allow_html=True)
-            st.dataframe(df)
-            df_pibote=pd.DataFrame(df.plataforma.value_counts())
-            df_pibote['plat']=df_pibote.index
-            f = sb.countplot(x=df.plataforma)
-            fig = f.figure
-            st.markdown("<h3 style='text-align: center; color: skyblue;'> Gráfica de Barras de Videojuegos </h3>", unsafe_allow_html=True)
-            st.pyplot(fig)
+def cargar_datos(df):
+          
+    if st.button('Ver tabla de Videojuegos'):
+        st.markdown("<h3 style='text-align: center; color: skyblue;'> DataFrame Videojuegos </h3>", unsafe_allow_html=True)
+        st.dataframe(df)
+        df_pibote=pd.DataFrame(df.plataforma.value_counts())
+        df_pibote['plat']=df_pibote.index
+        f = sb.countplot(x=df.plataforma)
+        fig = f.figure
+        st.markdown("<h3 style='text-align: center; color: skyblue;'> Gráfica de Barras de Videojuegos </h3>", unsafe_allow_html=True)
+        st.pyplot(fig)
     
  
 
-def tarta():
+def tarta(df):
     x=pd.DataFrame(df.Comp.value_counts())
 
     fig={'data':[{'values':x.Comp,'labels':x.index,'domain':{'x':[0,0.7]},'name':'','hoverinfo':'label+value','hole':0.5,'type':'pie'},],
@@ -91,7 +84,7 @@ def tarta():
     st.plotly_chart(fig,use_container_width=True)
 
     
-def generos(): 
+def generos(df): 
     df1 = df.copy()
     df1[df1.genre=='Sin genero']=np.NaN
     df1.dropna(inplace=True)
@@ -207,7 +200,7 @@ def plataforma_year():
     if st.checkbox("Norte América",value=False):
         st.plotly_chart(fig,use_container_width=True)
     
-def dias_Eu ():
+def dias_Eu (df):
     df_dias1 = pd.DataFrame(df['Dia Eu'].value_counts())
     df_dias1['dias']=df_dias1.index.astype(str)
 
@@ -219,7 +212,7 @@ def dias_Eu ():
     fig1.update_layout(font=dict(size=9),title_text='Cantidad de juegos que han salido en Europa, clasificados por los días del mes')
     return fig1
 
-def dias_Na ():
+def dias_Na (df):
     
     df_dias2 = pd.DataFrame(df['Dia Na'].value_counts())
     df_dias2['dias']=df_dias2.index.astype(str)
@@ -233,7 +226,7 @@ def dias_Na ():
     fig1.update_layout(font=dict(size=9),title_text='Cantidad de juegos que han salido en Norte América, clasificados por los días del mes')
     return fig1
 
-def dias_Jp ():
+def dias_Jp (df):
     df_dias3 = pd.DataFrame(df['Dia Jp'].value_counts())
     df_dias3['dias']=df_dias3.index.astype(str)
 
@@ -246,7 +239,7 @@ def dias_Jp ():
     fig1.update_layout(font=dict(size=9),title_text='Cantidad de juegos que han salido en Japón, clasificados por los días del mes')
     return fig1
 
-def dias_Au ():
+def dias_Au (df):
 
     df_dias4 = pd.DataFrame(df['Dia Au'].value_counts())
     df_dias4['dias']=df_dias4.index.astype(str)

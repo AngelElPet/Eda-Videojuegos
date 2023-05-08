@@ -2,26 +2,28 @@ import streamlit as st
 from utils_mainst.functionst import*
 import sqlite3
 import warnings
+import pandas as pd
 warnings.filterwarnings("ignore")
 def sql_query(query):
     
     return pd.read_sql(query,cnx)
 
 config_pagina()
+df = pd.read_csv('src/data/Videojuegos.csv', sep =';')
 
-menu = st.sidebar.selectbox('Menu',('Página principal','Cargar_datos','Regiones por Meses','Regiones por Dias','Generos principales','Conclusión'))
+menu = st.sidebar.selectbox('Menu',('Página principal','Cargar datos','Regiones por Meses','Regiones por Dias','Generos principales','Conclusión'))
 
 if menu=='Página principal':
     pagina_principal()
 
-elif menu =='Cargar_datos':
-    cargar_datos()
+elif menu == 'Cargar datos':
+    cargar_datos(df)
      
 elif menu =='Conclusión':
 
     st.header('Videojuegos')
-    plataforma_year()
-    tarta()
+    plataforma_year(df)
+    tarta(df)
     
     cnx = sqlite3.connect(':memory:')
     x=pd.DataFrame(df.Comp.value_counts())
@@ -98,22 +100,22 @@ elif menu== 'Regiones por Dias':
     ''')  
     if st.checkbox("Europa",value=False):
         st.markdown('El día más popular en Europa para que salga un juego es el 29.')
-        fig1 = dias_Eu()
+        fig1 = dias_Eu(df)
         st.plotly_chart(fig1, use_container_width=True)
 
     if st.checkbox("Norte América",value=False):
         st.markdown('El día más popular en Norte America para que salga un juego es el 29.')    
-        fig2 = dias_Na()
+        fig2 = dias_Na(df)
         st.plotly_chart(fig2, use_container_width=True)
 
     if st.checkbox("Japón",value=False):
         st.markdown('El día más popular en Japon para que salga un juego es el 20.')    
-        fig3 = dias_Jp()
+        fig3 = dias_Jp(df)
         st.plotly_chart(fig3, use_container_width=True)
 
     if st.checkbox("Australia",value=False):
         st.markdown('El día más popular en Australia para que salga un juego es el 29.')
-        fig4 = dias_Au()
+        fig4 = dias_Au(df)
         st.plotly_chart(fig4, use_container_width=True)
 
     
