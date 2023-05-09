@@ -62,8 +62,8 @@ elif menu =='Conclusión':
     FROM x
     WHERE Regiones LIKE '%NA%' AND Regiones LIKE '%EU%' '''
     st.dataframe(sql_query(query))
-    st.markdown('''CONCLUSIÓN: \n
-                Finalmente podemos apreciar que se han estrenado antes más juegos en Euro que en Norte América. Sin embargo, cabe destacar
+    st.subheader('CONCLUSIÓN:')
+    st.markdown('''Finalmente podemos apreciar que se han estrenado antes más juegos en Euro que en Norte América. Sin embargo, cabe destacar
                 que la gran mayoría de los juegos se han estrenado a la vez en ambas regiones.''')
 elif menu == 'Regiones por Meses':
     st.subheader('Clasificación de estreno por meses')
